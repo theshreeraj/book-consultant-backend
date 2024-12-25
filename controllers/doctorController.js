@@ -94,7 +94,7 @@ const doctorList = async (req, res) => {
     try {
 
         const doctors = await doctorModel.find({}).select(['-password', '-email'])
-        res.json({ success: true, doctors })
+        res.status(200).json({ success: true, doctors })
 
     } catch (error) {
         console.log(error)
