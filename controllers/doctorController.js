@@ -93,8 +93,8 @@ const appointmentComplete = async (req, res) => {
 const doctorList = async (req, res) => {
     try {
 
-        const doctors = await doctorModel.find({}).select(['-password', '-email'])
-        return res.status(200).json({ success: true, doctors })
+        const doctors = await doctorModel.find()
+        res.status(200).json({ success: true, doctors })
 
     } catch (error) {
         console.log(error)
