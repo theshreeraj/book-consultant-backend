@@ -103,7 +103,7 @@ const doctorList = async (req, res) => {
       },
     };
 
-    const doctor = await new doctorModel.save(user)
+    const doctor = await new doctorModel.create(user)
     const sampleJson = {
       name: "Nikhil",
     };
