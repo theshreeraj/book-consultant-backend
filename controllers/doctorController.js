@@ -93,8 +93,11 @@ const appointmentComplete = async (req, res) => {
 const doctorList = async (req, res) => {
     try {
 
-        const doctors = await doctorModel.findById({"_id":"676bda891136602984e2b046"})
-        res.status(200).json({ success: true, doctors })
+        // const doctors = await doctorModel.findById({"_id":"676bda891136602984e2b046"})
+        const sampleJson = {
+            "name" : "Nikhil"
+        }
+        res.status(200).json({ success: true, sampleJson })
 
     } catch (error) {
         console.log(error)
